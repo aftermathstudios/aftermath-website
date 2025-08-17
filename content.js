@@ -4,13 +4,13 @@ const siteContent = {
     "tagline": "Art Studio"
   },
   "hero": {
-    "title": "Where Art Transforms Reality",
-    "subtitle": "Exploring the boundaries of contemporary art through innovative expression",
+    "title": "Start Indie, Finish Legendary",
+    "subtitle": "Love of art and literature moves us forward!",
     "ctaButton": "Read Antumbra"
   },
   "antumbra": {
     "title": "ANTUMBRA",
-    "subtitle": "Our Latest Manga",
+    "subtitle": "Our Flagship Manga Series",
     "badges": ["ACT 1", "ONGOING"],
     "synopsis": [
       "Follow Ari, a young girl on the run who ends up in Anapoda, a colony suspended in the sky. She meets Estrilda, a well-known freelancer, and the Antumbra team, a start-up freelancer group. Follow their journey as they face various challenges and uncover secrets of this world, as well as their own.",
@@ -31,7 +31,7 @@ const siteContent = {
         "url": "https://www.webtoons.com/en/canvas/antumbra/list?title_no=944127"
       },
       "mangaplus": {
-        "text": "MANGA Plus",
+        "text": "MANGAPlus",
         "url": "https://mangaplus-creators.jp/titles/0h2405010143190140026103144"
       }
     }
@@ -39,9 +39,9 @@ const siteContent = {
   "about": {
     "title": "About Aftermath Studios",
     "paragraphs": [
-      "Founded in 2024, Aftermath Studios emerged from the belief that art should challenge, inspire, and transform. We are a collective of stylized artists pushing the boundaries of creative expression.",
-      "Our studio serves as both a creative workspace and gallery, fostering collaboration between established and emerging artists. We specialize in fiction across various mediums, from traditional storyboarding, to digital installations and interactive experiences.",
-      "At Aftermath, we believe that art is not just about the final piece, but about the journey, the process, and the conversations it creates. Each work tells a story, captures a moment, or challenges a perspective."
+      "We're Aftermath Studios - basically a bunch of freelance artists who love manga and decided to team up! Founded by Holy and Maiko in 2024 when we started working on Antumbra, we're now a group of creators from all over the place working together to make awesome stories and art that we're genuinely excited about.",
+      "Antumbra is our big project right now, and honestly, it's been amazing seeing what happens when artists with different skills come together. We've got character artists, background wizards, storytellers - everyone bringing their own flavor to the mix. We all work from wherever we are, which is pretty cool.",
+      "The best part? Everyone keeps their creative freedom while working on something bigger together. We're not your typical studio - we're more like a group of artist friends making the manga we want to see in the world."
     ],
     "stats": {
       "artists": "15+",

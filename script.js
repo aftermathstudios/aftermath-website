@@ -139,11 +139,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navToggle.addEventListener('click', function() {
         this.classList.toggle('active');
-        sidebar.classList.toggle('collapsed');
-        mainContent.classList.toggle('expanded');
         
         if (window.innerWidth <= 768) {
             sidebar.classList.toggle('active');
+        } else {
+            sidebar.classList.toggle('collapsed');
+            mainContent.classList.toggle('expanded');
         }
     });
 
@@ -190,7 +191,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 const sectionId = entry.target.getAttribute('id');
                 navLinks.forEach(link => {
                     link.classList.remove('active');
-                    if (link.getAttribute('data-section') === sectionId) {
+                    // Check for antumbra section which is in the page
+                    if (link.getAttribute('data-section') === sectionId || 
+                        (sectionId === 'antumbra' && link.getAttribute('href') === 'antumbra.html')) {
                         link.classList.add('active');
                     }
                 });

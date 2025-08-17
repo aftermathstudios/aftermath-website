@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="image-viewer.css">
 </head>
 <body>
-    <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+    <div class="top-bar">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <span class="top-bar-title">ANTUMBRA</span>
+    </div>
 
     <nav class="sidebar">
         <div class="sidebar-header">
@@ -135,11 +138,23 @@
             // Navigation toggle
             navToggle.addEventListener('click', function() {
                 this.classList.toggle('active');
-                sidebar.classList.toggle('collapsed');
-                mainContent.classList.toggle('expanded');
                 
                 if (window.innerWidth <= 768) {
                     sidebar.classList.toggle('active');
+                } else {
+                    sidebar.classList.toggle('collapsed');
+                    mainContent.classList.toggle('expanded');
+                }
+            });
+            
+            // Set active nav link for current page
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-link').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage || (currentPage === 'antumbra.html' && href === 'antumbra.html')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
                 }
             });
             
