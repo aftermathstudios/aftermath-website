@@ -149,6 +149,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            // Check if it's an external page link (like antumbra.html)
+            const href = this.getAttribute('href');
+            if (href && !href.startsWith('#')) {
+                // Let the browser handle external links normally
+                return;
+            }
+            
             e.preventDefault();
             
             navLinks.forEach(l => l.classList.remove('active'));

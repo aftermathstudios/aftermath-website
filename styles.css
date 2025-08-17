@@ -64,8 +64,7 @@ body::before {
     z-index: 1001;
     width: 40px;
     height: 40px;
-    background: var(--white);
-    border: 2px solid var(--primary-purple);
+    background: var(--gray-100);
     border-radius: 8px;
     cursor: pointer;
     display: flex;
@@ -102,8 +101,6 @@ body::before {
     height: 100vh;
     width: var(--sidebar-width);
     background: var(--darkest-purple);
-    border-right: 1px solid var(--primary-purple);
-    border-radius: 0 16px 16px 0;
     z-index: 1000;
     transition: var(--transition);
     transform: translateX(0);
@@ -115,7 +112,7 @@ body::before {
 
 .sidebar-header {
     padding: var(--spacing-lg) var(--spacing-md);
-    border-bottom: 1px solid var(--primary-purple);
+    background: var(--dark-purple);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,6 +301,7 @@ body::before {
     letter-spacing: 2px;
     font-size: 0.9rem;
     font-weight: 500;
+    border: none;
     border-radius: 8px;
     transition: var(--transition);
     position: relative;
@@ -323,8 +321,10 @@ body::before {
 }
 
 .cta-button:hover {
-    color: var(--primary-purple);
-    border: 1px solid var(--primary-purple);
+    background: var(--white);
+    color: var(--dark-purple);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(94, 77, 147, 0.3);
 }
 
 .cta-button:hover::before {
@@ -373,7 +373,6 @@ body::before {
 
 .badge {
     padding: var(--spacing-xs) var(--spacing-sm);
-    border: 1px solid var(--primary-purple);
     background: var(--primary-purple);
     color: var(--white);
     text-transform: uppercase;
@@ -393,20 +392,20 @@ body::before {
 
 .cover-art {
     position: relative;
-    border: 2px solid var(--primary-purple);
     border-radius: 12px;
     overflow: hidden;
     background: var(--darkest-purple);
     max-width: 400px;
     width: 100%;
     aspect-ratio: 3/4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .cover-art img {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 
@@ -449,7 +448,6 @@ body::before {
     padding: var(--spacing-sm) var(--spacing-md);
     background: var(--white);
     color: var(--dark-purple);
-    border: 1px solid var(--primary-purple);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -458,6 +456,7 @@ body::before {
     border-radius: 6px;
     transition: var(--transition);
     margin-left: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .platform-btn:first-child {
@@ -474,7 +473,8 @@ body::before {
 .platform-btn:hover {
     background: var(--primary-purple);
     color: var(--white);
-    z-index: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(94, 77, 147, 0.2);
 }
 
 .chapters-section {
@@ -503,20 +503,18 @@ body::before {
     display: block;
     aspect-ratio: 3/4;
     background: var(--white);
-    border: 1px solid var(--primary-purple);
-    border-bottom-width: 2px;
     border-radius: 8px;
     text-decoration: none;
     overflow: hidden;
     transition: var(--transition);
     cursor: pointer;
     margin-bottom: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .chapter-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(94, 77, 147, 0.3);
-    border-color: var(--dark-purple);
     z-index: 10;
 }
 
@@ -631,9 +629,9 @@ body::before {
     flex: 1;
     text-align: center;
     padding: var(--spacing-sm);
-    border: 1px solid var(--primary-purple);
     border-radius: 8px;
     background: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .stat-item h4 {
@@ -662,9 +660,8 @@ body::before {
 
 .act-btn {
     padding: var(--spacing-sm) var(--spacing-md);
-    background: var(--white);
+    background: var(--gray-100);
     color: var(--dark-purple);
-    border: 1px solid var(--primary-purple);
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -690,7 +687,8 @@ body::before {
 .act-btn.active {
     background: var(--primary-purple);
     color: var(--white);
-    z-index: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(94, 77, 147, 0.2);
 }
 
 .act-btn.disabled {
@@ -730,11 +728,10 @@ body::before {
 
 .stat {
     padding: var(--spacing-md);
-    border: 1px solid var(--primary-purple);
     border-radius: 8px;
     margin-top: 8px;
     transition: var(--transition);
-    background: var(--white);
+    background: var(--gray-100);
 }
 
 .stat:first-child {
@@ -744,7 +741,8 @@ body::before {
 .stat:hover {
     background: var(--primary-purple);
     color: var(--white);
-    z-index: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(94, 77, 147, 0.2);
 }
 
 .stat h3 {
@@ -774,24 +772,25 @@ body::before {
 }
 
 .artist-card {
-    background: var(--white);
+    background: var(--gray-100);
     padding: var(--spacing-lg);
-    border: 1px solid var(--primary-purple);
     border-radius: 12px;
     margin: 8px;
     transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .artist-card:hover {
     background: var(--primary-purple);
     color: var(--white);
-    z-index: 1;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(94, 77, 147, 0.3);
 }
 
 .artist-image-placeholder {
     width: 100px;
     height: 100px;
-    border: 2px solid currentColor;
+    background: var(--white);
     border-radius: 16px;
     margin: 0 auto var(--spacing-md);
     position: relative;
@@ -864,10 +863,9 @@ body::before {
 
 .social-link {
     padding: var(--spacing-sm) var(--spacing-md);
-    background: var(--white);
+    background: var(--gray-100);
     color: var(--dark-purple);
     text-decoration: none;
-    border: 1px solid var(--primary-purple);
     border-radius: 6px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -884,7 +882,8 @@ body::before {
 .social-link:hover {
     background: var(--primary-purple);
     color: var(--white);
-    z-index: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(94, 77, 147, 0.2);
 }
 
 .contact-form {
@@ -896,9 +895,9 @@ body::before {
 .contact-form select,
 .contact-form textarea {
     padding: var(--spacing-sm);
-    border: 1px solid var(--primary-purple);
+    border: none;
     border-radius: 6px;
-    background: var(--white);
+    background: var(--gray-100);
     font-family: inherit;
     font-weight: 300;
     transition: var(--transition);
@@ -923,7 +922,7 @@ body::before {
     padding: var(--spacing-sm) var(--spacing-md);
     background: var(--primary-purple);
     color: var(--white);
-    border: 1px solid var(--primary-purple);
+    border: none;
     border-radius: 8px;
     cursor: pointer;
     text-transform: uppercase;
@@ -943,7 +942,6 @@ body::before {
     background: var(--dark-gray);
     color: var(--white);
     padding: var(--spacing-xl) 0 var(--spacing-md);
-    border-top: 1px solid var(--primary-purple);
 }
 
 .footer-content {
@@ -1013,9 +1011,9 @@ body::before {
 .newsletter-form input {
     flex: 1;
     padding: var(--spacing-sm);
-    border: 1px solid var(--white);
+    border: none;
     border-radius: 6px 0 0 6px;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
     color: var(--white);
     font-weight: 300;
 }
@@ -1028,7 +1026,7 @@ body::before {
     padding: var(--spacing-sm) var(--spacing-md);
     background: var(--white);
     color: var(--dark-purple);
-    border: 1px solid var(--white);
+    border: none;
     border-radius: 0 6px 6px 0;
     cursor: pointer;
     text-transform: uppercase;
@@ -1036,7 +1034,7 @@ body::before {
     font-size: 0.8rem;
     font-weight: 500;
     transition: var(--transition);
-    margin-left: -1px;
+    margin-left: 0;
 }
 
 .newsletter-form button:hover {
