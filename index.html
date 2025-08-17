@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftermath Art Studio - Contemporary Art & Creative Expression</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo-link">
+                <img src="icons-and-links/AFTM-logo.svg" alt="Aftermath Studios Logo" class="logo-img">
+            </a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link" data-section="home">
+                <span class="nav-icon">□</span>
+                <span class="nav-text">Home</span>
+            </a></li>
+            <li><a href="antumbra.html" class="nav-link">
+                <span class="nav-icon">◇</span>
+                <span class="nav-text">Antumbra</span>
+            </a></li>
+            <li><a href="#about" class="nav-link" data-section="about">
+                <span class="nav-icon">○</span>
+                <span class="nav-text">About</span>
+            </a></li>
+            <li><a href="#artists" class="nav-link" data-section="artists">
+                <span class="nav-icon">△</span>
+                <span class="nav-text">Artists</span>
+            </a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">
+                <span class="nav-icon">▽</span>
+                <span class="nav-text">Contact</span>
+            </a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="studio-branding">
+                <img src="icons-and-links/AFTM-logo.svg" alt="Aftermath Studios Logo" class="hero-logo">
+                <h1 class="studio-name">AFTERMATH STUDIOS</h1>
+            </div>
+            <h2 class="hero-title">Where Art Transforms Reality</h2>
+            <p class="hero-subtitle">Exploring the boundaries of contemporary art through innovative expression</p>
+            <a href="#antumbra" class="cta-button">Read Antumbra</a>
+        </div>
+        <div class="hero-image-placeholder"></div>
+    </section>
+
+    <section id="antumbra" class="antumbra">
+        <div class="container">
+            <div class="antumbra-header">
+                <h2 class="section-title">ANTUMBRA</h2>
+                <div class="manga-badges">
+                    <span class="badge">ACT 1</span>
+                    <span class="badge">ONGOING</span>
+                </div>
+            </div>
+            
+            <div class="antumbra-showcase">
+                <div class="cover-art">
+                    <img src="icons-and-links/CoverArt-2.jpg" alt="Antumbra Act 1 Cover Art">
+                </div>
+                
+                <div class="manga-info">
+                    <div class="synopsis">
+                        <h3>Our Latest Manga</h3>
+                        <p>In a world where shadows hold ancient power and light becomes a weapon, two unlikely heroes must navigate the delicate balance between darkness and illumination.</p>
+                        <p>Antumbra is our flagship manga series, featuring stunning artwork and an immersive storyline that explores the eternal dance between light and dark.</p>
+                    </div>
+                    
+                    <div class="manga-stats">
+                        <div class="stat-item">
+                            <h4>44</h4>
+                            <p>Chapters</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>3</h4>
+                            <p>Acts Planned</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>2024</h4>
+                            <p>Launch Year</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-section">
+                        <a href="antumbra.html" class="cta-button">Read All Chapters</a>
+                        <div class="platform-links">
+                            <a href="https://namicomi.com/en/title/q6j7JL3M/antumbra" target="_blank" class="platform-btn">NamiComi</a>
+                            <a href="https://www.webtoons.com/en/canvas/antumbra/list?title_no=944127" target="_blank" class="platform-btn">WEBTOON</a>
+                            <a href="https://mangaplus-creators.jp/titles/0h2405010143190140026103144" target="_blank" class="platform-btn">MANGA Plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Aftermath</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Founded in 2020, Aftermath Art Studio emerged from the belief that art should challenge, inspire, and transform. We are a collective of contemporary artists pushing the boundaries of creative expression.</p>
+                    <p>Our studio serves as both a creative workspace and gallery, fostering collaboration between established and emerging artists. We specialize in contemporary art across various mediums, from traditional painting and sculpture to digital installations and interactive experiences.</p>
+                    <p>At Aftermath, we believe that art is not just about the final piece, but about the journey, the process, and the conversations it creates. Each work tells a story, captures a moment, or challenges a perspective.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p>Featured Artists</p>
+                    </div>
+                    <div class="stat">
+                        <h3>200+</h3>
+                        <p>Artworks Created</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Exhibitions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="artists" class="artists">
+        <div class="container">
+            <h2 class="section-title">Our Artists</h2>
+            <div class="artists-grid" id="artists-grid">
+                <!-- Artist cards will be dynamically generated here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Visit Our Studio</h3>
+                    <p class="address">
+                        123 Art District Lane<br>
+                        Creative Quarter<br>
+                        New York, NY 10001
+                    </p>
+                    <div class="contact-details">
+                        <p><strong>Phone:</strong> (555) 123-4567</p>
+                        <p><strong>Email:</strong> info@aftermartart.studio</p>
+                        <p><strong>Hours:</strong> Tue-Sat 10AM-6PM</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <select required>
+                        <option value="">Select Inquiry Type</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="artwork">Artwork Purchase</option>
+                        <option value="commission">Commission Request</option>
+                        <option value="exhibition">Exhibition Proposal</option>
+                        <option value="collaboration">Collaboration</option>
+                    </select>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>AFTERMATH</h3>
+                        <p>Contemporary Art Studio</p>
+                        <p>&copy; 2024 Aftermath Art Studio. All rights reserved.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="antumbra.html">Antumbra</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#artists">Our Artists</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe to stay updated on exhibitions and new artworks</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="content.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

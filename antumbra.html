@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antumbra - Aftermath Art Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo-link">
+                <img src="icons-and-links/AFTM-logo.svg" alt="Aftermath Studios Logo" class="logo-img">
+            </a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html#home" class="nav-link">
+                <span class="nav-icon">□</span>
+                <span class="nav-text">Home</span>
+            </a></li>
+            <li><a href="antumbra.html" class="nav-link active">
+                <span class="nav-icon">◇</span>
+                <span class="nav-text">Antumbra</span>
+            </a></li>
+            <li><a href="index.html#about" class="nav-link">
+                <span class="nav-icon">○</span>
+                <span class="nav-text">About</span>
+            </a></li>
+            <li><a href="index.html#artists" class="nav-link">
+                <span class="nav-icon">△</span>
+                <span class="nav-text">Artists</span>
+            </a></li>
+            <li><a href="index.html#contact" class="nav-link">
+                <span class="nav-icon">▽</span>
+                <span class="nav-text">Contact</span>
+            </a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="antumbra-page">
+            <div class="container">
+                <div class="antumbra-header">
+                    <h1 class="page-title">ANTUMBRA</h1>
+                    <div class="manga-badges">
+                        <span class="badge">ACT 1</span>
+                        <span class="badge">ONGOING</span>
+                    </div>
+                </div>
+
+                <div class="antumbra-showcase">
+                    <div class="cover-art">
+                        <img src="icons-and-links/CoverArt-2.jpg" alt="Antumbra Act 1 Cover Art">
+                    </div>
+                    
+                    <div class="manga-info">
+                        <div class="synopsis">
+                            <h3>Synopsis</h3>
+                            <p>In a world where shadows hold ancient power and light becomes a weapon, two unlikely heroes must navigate the delicate balance between darkness and illumination. As mysteries unfold in the twilight realm of Antumbra, alliances will be tested and destinies will be forged.</p>
+                            <p>Follow the journey through a realm where every eclipse brings new dangers, and the line between shadow and substance blurs. A tale of courage, mystery, and the eternal dance between light and dark.</p>
+                        </div>
+                        
+                        <div class="read-links">
+                            <h4>Read Antumbra On:</h4>
+                            <div class="platform-links">
+                                <a href="https://namicomi.com/en/title/q6j7JL3M/antumbra" target="_blank" class="platform-btn">NamiComi</a>
+                                <a href="https://www.webtoons.com/en/canvas/antumbra/list?title_no=944127" target="_blank" class="platform-btn">WEBTOON</a>
+                                <a href="https://mangaplus-creators.jp/titles/0h2405010143190140026103144" target="_blank" class="platform-btn">MANGA Plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapters-section">
+                    <h2 class="chapters-title">COMPLETE CHAPTER LIST</h2>
+                    <div class="act-selector">
+                        <button class="act-btn active" data-act="1">ACT 1</button>
+                        <button class="act-btn disabled" data-act="2">ACT 2 - COMING SOON</button>
+                        <button class="act-btn disabled" data-act="3">ACT 3 - COMING SOON</button>
+                    </div>
+                    
+                    <div class="chapters-grid" id="chapters-grid">
+                        <!-- Chapters 1-43 will be generated here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>AFTERMATH</h3>
+                        <p>Contemporary Art Studio</p>
+                        <p>&copy; 2024 Aftermath Art Studio. All rights reserved.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="antumbra.html">Antumbra</a></li>
+                            <li><a href="index.html#about">About Us</a></li>
+                            <li><a href="index.html#artists">Our Artists</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Follow Antumbra</h4>
+                        <div class="social-links">
+                            <a href="https://namicomi.com/en/title/q6j7JL3M/antumbra" target="_blank" class="social-link">NamiComi</a>
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            const mainContent = document.querySelector('.main-content');
+            const chaptersGrid = document.getElementById('chapters-grid');
+            
+            // Navigation toggle
+            navToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                sidebar.classList.toggle('collapsed');
+                mainContent.classList.toggle('expanded');
+                
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.toggle('active');
+                }
+            });
+            
+            // Chapter release dates (British format: DD/MM/YYYY)
+            const chapterDates = [
+                '01/05/2024', '08/05/2024', '15/05/2024', '22/05/2024', '29/05/2024',
+                '12/06/2024', '19/06/2024', '26/06/2024', '03/07/2024', '10/07/2024',
+                '24/07/2024', '31/07/2024', '07/08/2024', '14/08/2024', '21/08/2024',
+                '04/09/2024', '11/09/2024', '18/09/2024', '25/09/2024', '02/10/2024',
+                '16/10/2024', '23/10/2024', '30/10/2024', '06/11/2024', '13/11/2024',
+                '27/11/2024', '04/12/2024', '11/12/2024', '18/12/2024', '01/01/2025',
+                '22/01/2025', '22/01/2025', '05/02/2025', '19/02/2025', '20/03/2025',
+                '15/04/2025', '16/04/2025', '23/04/2025', '30/04/2025', '14/05/2025',
+                '28/05/2025', '04/06/2025', '18/06/2025', '02/07/2025'
+            ];
+            
+            // Generate all 44 chapters with correct NamiComi links
+            const chapterLinks = [
+                'https://namicomi.com/en/chapter/AJMk6hZc', // Ch1
+                'https://namicomi.com/en/chapter/sTgR4rJP', // Ch2
+                'https://namicomi.com/en/chapter/T6BMjkvf', // Ch3
+                'https://namicomi.com/en/chapter/zcZSSt6R', // Ch4
+                'https://namicomi.com/en/chapter/meyiYXs6', // Ch5
+                'https://namicomi.com/en/chapter/JUjznS3G', // Ch6
+                'https://namicomi.com/en/chapter/vMFG5sQz', // Ch7
+                'https://namicomi.com/en/chapter/GPFxNiRw', // Ch8
+                'https://namicomi.com/en/chapter/faFyrqRT', // Ch9
+                'https://namicomi.com/en/chapter/yxUM4KLa', // Ch10
+                'https://namicomi.com/en/chapter/ZNDhKwt9', // Ch11
+                'https://namicomi.com/en/chapter/tKzwhXWb', // Ch12
+                'https://namicomi.com/en/chapter/7iHTZr5U', // Ch13
+                'https://namicomi.com/en/chapter/uWXtgBSe', // Ch14
+                'https://namicomi.com/en/chapter/QTpLLzc7', // Ch15
+                'https://namicomi.com/en/chapter/tnHr7QtB', // Ch16
+                'https://namicomi.com/en/chapter/7Un2AxWv', // Ch17
+                'https://namicomi.com/en/chapter/3kQ4uBBT', // Ch18
+                'https://namicomi.com/en/chapter/kzHt8UcA', // Ch19
+                'https://namicomi.com/en/chapter/iVJGZn3i', // Ch20
+                'https://namicomi.com/en/chapter/ccEYQtQL', // Ch21
+                'https://namicomi.com/en/chapter/PjLRszyK', // Ch22
+                'https://namicomi.com/en/chapter/QzQpLsvD', // Ch23
+                'https://namicomi.com/en/chapter/fFaQL2sB', // Ch24
+                'https://namicomi.com/en/chapter/74ishsfr', // Ch25
+                'https://namicomi.com/en/chapter/ezchTJWj', // Ch26
+                'https://namicomi.com/en/chapter/krj952J2', // Ch27
+                'https://namicomi.com/en/chapter/GYaqiuvE', // Ch28
+                'https://namicomi.com/en/chapter/SiSpKtCa', // Ch29
+                'https://namicomi.com/en/chapter/M2dbNbNc', // Ch30
+                'https://namicomi.com/en/chapter/RbvqQ5id', // Ch31
+                'https://namicomi.com/en/chapter/MsTqcbCv', // Ch32
+                'https://namicomi.com/en/chapter/4rMvXyP5', // Ch33
+                'https://namicomi.com/en/chapter/3zttCg9f', // Ch34
+                'https://namicomi.com/en/chapter/hqxfBcKA', // Ch35
+                'https://namicomi.com/en/chapter/cW5GFU6Z', // Ch36
+                'https://namicomi.com/en/chapter/zA6sXydv', // Ch37
+                'https://namicomi.com/en/chapter/xcNNUXNp', // Ch38
+                'https://namicomi.com/en/chapter/vjQaEuwD', // Ch39
+                'https://namicomi.com/en/chapter/HSX5e3gv', // Ch40
+                'https://namicomi.com/en/chapter/TTmqv5tM', // Ch41
+                'https://namicomi.com/en/chapter/NSWn49Ha', // Ch42
+                'https://namicomi.com/en/chapter/TsvPDLWK', // Ch43
+                'https://namicomi.com/en/chapter/P3mireLG'  // Ch44
+            ];
+            
+            for (let i = 1; i <= 44; i++) {
+                const chapterCard = document.createElement('a');
+                chapterCard.href = chapterLinks[i-1];
+                chapterCard.target = '_blank';
+                chapterCard.className = 'chapter-card';
+                
+                chapterCard.innerHTML = `
+                    <img src="icons-and-links/Act1/Chapters/Ch${i}/Ch${i}_thumb.jpg" alt="Chapter ${i}" class="chapter-thumbnail">
+                    <div class="chapter-overlay">
+                        <span class="chapter-number">${String(i).padStart(2, '0')}</span>
+                    </div>
+                    <div class="chapter-date">
+                        <span>${chapterDates[i-1]}</span>
+                    </div>
+                `;
+                
+                chaptersGrid.appendChild(chapterCard);
+            }
+            
+            // Add row dividers
+            function addRowDividers() {
+                const grid = document.getElementById('chapters-grid');
+                const cards = grid.querySelectorAll('.chapter-card');
+                const computedStyle = window.getComputedStyle(grid);
+                const columns = computedStyle.getPropertyValue('grid-template-columns').split(' ').length;
+                
+                // Remove existing dividers
+                grid.querySelectorAll('.row-divider').forEach(d => d.remove());
+                
+                // Add dividers after each complete row except the last
+                for (let i = columns; i < cards.length; i += columns) {
+                    const divider = document.createElement('div');
+                    divider.className = 'row-divider';
+                    divider.style.gridColumn = '1 / -1';
+                    cards[i].parentNode.insertBefore(divider, cards[i]);
+                }
+            }
+            
+            // Add dividers on load and resize
+            setTimeout(addRowDividers, 100);
+            window.addEventListener('resize', addRowDividers);
+            
+            // Animate chapter cards on load
+            const chapterCards = document.querySelectorAll('.chapter-card');
+            chapterCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 50 * Math.min(index, 10)); // Faster animation for many items
+            });
+            
+            // Cover art animation
+            const coverArt = document.querySelector('.cover-art img');
+            if (coverArt) {
+                coverArt.style.opacity = '0';
+                coverArt.style.transform = 'scale(0.95)';
+                coverArt.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                
+                setTimeout(() => {
+                    coverArt.style.opacity = '1';
+                    coverArt.style.transform = 'scale(1)';
+                }, 300);
+            }
+            
+            // ESC key to close sidebar
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    sidebar.classList.add('collapsed');
+                    mainContent.classList.add('expanded');
+                    navToggle.classList.remove('active');
+                    
+                    if (window.innerWidth <= 768) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
